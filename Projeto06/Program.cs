@@ -11,7 +11,21 @@ namespace Projeto06
             f.Nome = Console.ReadLine();
             Console.WriteLine("Salário Bruto; ");
             f.SalarioBruto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Imposto; ");
+            f.Imposto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
+            Console.WriteLine();
+            Console.WriteLine("Funcionário; " + f);
+
+            Console.WriteLine();
+            Console.WriteLine("Porcentagem de aumento de salário; ");
+            double Porcento = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            f.AumentarSalario(Porcento);
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados; " + f);
+
+            Console.WriteLine("aperte qualquer botão para encerrar.");
+            Console.ReadLine();
         }
     }
 }
